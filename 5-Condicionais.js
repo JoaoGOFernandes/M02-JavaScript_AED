@@ -70,6 +70,14 @@ switch(havaiano){
         break
 }
 
+switch (key) {
+    case value:
+        
+        break;
+
+    default:
+        break;
+}
 //OPERADORES
 
 //Logicos
@@ -125,3 +133,4 @@ NaN ? console.log("truthy") : console.log("falsy")         //falsy
 
 //Truthy
 //São muitos casos, levar em consideração, mas focar nos falsy
+
