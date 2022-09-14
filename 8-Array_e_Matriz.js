@@ -32,7 +32,7 @@ const vetorC = [...vetorA, 6, 7, 8, 9, 10];
 console.log(vetorC);
 
 
-//Desestruturando o array para um conjunto de variaveis
+//PADRÃO REST
 const arrayA = [1, 2, 3];
 const [a, b, c] = [1, 2, 3];
 
@@ -50,4 +50,12 @@ console.log(second);
 console.log(third);
 console.log(remainder);
 
+
+//PARAMETRO REST
+const rest = function(...dados){
+    console.log(dados);
+}
+
+rest(2,3);
+rest("shabau","timbalaie", "toctoc")
 
