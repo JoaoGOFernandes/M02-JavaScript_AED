@@ -28,7 +28,7 @@ console.log(Math.max(7,8,9,10,11,12));  //12
 console.log(Math.min(7,8,9,10,11,12));  //7
 
 //Pontencia e raiz
-console.log(Math.pow(3,2));  //9
+console.log(3 ** 2);  //9
 console.log(Math.sqrt(16));  //16
 
 //Geração de números pseudo-aleatórios
