@@ -231,7 +231,7 @@ const bookMessage = '\'O Conto da Aia\' é um dos livros mais vendidos da décad
 */
 
 const name = 'walter white';
-let newName = name[0].toUpperCase() + name.slice(1,6) + name[7].toUpperCase() + name.slice(8);
+let newName = name[0].toUpperCase() + name.slice(1,7) + name[7].toUpperCase() + name.slice(8);
 //console.log(newName);
 
 /*
