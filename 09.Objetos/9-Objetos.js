@@ -96,3 +96,26 @@ console.log(joao['job']);       //notação de colchete
 //console.log(joao);
 //console.log(joao['firstName']);
 
+//Array de objetos 
+let user = {
+    name: 'João',
+    age: 25,
+    email: 'joaogof@usp.br',
+    city: 'Ribeirão Preto -SP',
+    blogPosts:[
+        {title: 'Empadão de frango', likes: 30},
+        {title: '4 receitas de pure de batata', likes: 50}
+    ],
+    logBlogPosts () {
+        console.log(`${this.name} escreveu os seguintes postes: `)
+
+        this.blogPosts.forEach(post=>{                                    //Iterando pelo array dentro do objeto
+            console.log(`${post.title} que obteve ${post.likes} likes`);  //Chamando cada atributo do objeto
+        })
+    }
+}
+
+user.logBlogPosts()
+
+//Objeto Math - já imbutido na linguagem
+console.log(Math); //visualizando o math
