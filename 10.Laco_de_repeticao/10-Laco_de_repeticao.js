@@ -50,7 +50,7 @@ for(let i = 0; i < 10; i++){
 const vetor = [10,20,30,40,50]
 
 for(index in vetor){
-    console.log(index, vetor[index]);  //mostra o index e o valor dessa
+    console.log(index, vetor[index]);
 }
 
 //FOR OF
