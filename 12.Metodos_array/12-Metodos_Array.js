@@ -89,3 +89,72 @@ const rogerScore = phaseScores.reduce((accumulator, phaseScore) => {
 }, 0)
 
 console.log(rogerScore);
+
+//SORT
+//Ordena  strings, numeros e objetos de um array, modificando o array original
+const names = ['Christian', 'Alfredo', 'Edson']
+names.sort()
+
+console.log('names')
+//Ordenou em ordem alfabetica os nomes
+
+const scores = [10, 50, 20, 5, 35, 70, 45]
+scores.sort()
+//OBS: o sort ordena numeros baseados somente no primeiro algarismo, para resolver isso
+scores.sort((score1, score2)=> score2 - score1 )
+
+//OBS: Para numeros deve ser passado a função de parametro para correta ordenação
+
+
+console.log(scores)
+
+const theBigFamily = [
+    { name: "Lineu", score: 20 },
+    { name: "Nenê", score: 10},
+    { name: "Tuco", score: 50},
+    { name: "Bebel", score: 30},
+    { name: "Agostinho", score: 70}
+]
+
+// theBigFamily.sort((item1, item2) => {
+//     if(item1.score > item2.score){
+//         return -1
+//     }else if(item2.score > item1.score){
+//         return 1
+//     }
+
+//     return 0
+// })
+
+// console.log(theBigFamily);
+//OBS: o sort pode receber um argumento opcional que é uma função de conparação
+//OBS: a função de comparação entre dois itens deve retornar um numero >0, <0 ou =0
+//item1 > item 2, então < 0
+//item1 < item 2, então > 0
+//item1 = item 2, então = 0
+
+theBigFamily.sort((item1, item2) => item2.score - item1.score)
+//Se >0 item 2 antes do item1
+//Se <0 item 1 antes do item2
+//Se =0 itens nao sao ordenados
+
+console.log(theBigFamily)
+
+//CONCATENAÇÃO DE METODOS
+
+const books =[
+    {name: 'Código Limpo', price: 30},
+    {name: 'O milagre da manhã', price: 5},
+    {name: 'Alice no País das Maravilhas', price: 10},
+    {name: 'Quem Pensa Enriquece', price: 50},
+    {name: 'O livro da ciência', price: 40}
+]
+
+// const filteredBooks = books.filter(book => book.price > 20)
+// const booksOnSale = filteredBooks.map(book => `O preço do livro "${books.name}" caiu para ${books.price} reais`)
+
+const booksOnSale = books
+    .filter(({price}) => price > 20)
+    .map(({name, price}) =>
+     `O preço do livro "${name}" caiu para ${price} reais`)
+debugger
